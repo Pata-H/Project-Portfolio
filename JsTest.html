@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Russell Francisco's Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+
+        <div class="core">
+          <div id="table"></div>
+          
+        </div>
+
+        
+ <script type="text/javascript">
+
+
+ var mysql = mysql.createConnection({
+   host: "localhost",
+   port: 3306,
+   user: "root",
+   password: "break123out",
+   database: "projectport"
+});
+
+
+mysql.connect(function(err) {   
+   if (err) throw err;
+   mysql.query("SELECT * FROM info", function (err, result, fields) {
+     if (err) throw err;
+     console.log(result);
+
+    var dataPrint = result;
+    
+    $.post(currentURL + "/api/tables", dataPrint,
+	    function(data){
+
+	    	// If a table is available... tell user they are booked.
+	    	if(data == true){
+	    		alert("Data loaded!")
+	    	}
+
+	    	// If a table is available... tell user they on the waiting list.
+	    	if(data == false){
+	    		alert("Oops something went wrong!")
+            };
+        });
+    
+   });
+ 
+
+
+   
+ });
+
+ /* var infoDiv = document.getElementById("table");
+  var infoText = document.createTextNode("Test!");
+  infoDiv.appendChild(infoText); */ </script>
+
+
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="./assets/javascript/table.js"></script>
+

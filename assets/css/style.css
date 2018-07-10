@@ -1,0 +1,135 @@
+body {font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+        color: #777777;
+        background-color: #efefef;
+        background: #efefef url("../images/congruent_outline.png");}
+        
+    h1, h2 {font-family: 'Georgia', Times, 'Times New Roman', serif;
+        color: #4aaaa5;}
+
+    a {text-decoration: none;}
+
+    h1 {font-size: 2.5em}
+
+    h2 {font-size: 1.6em}
+
+    html, body {height: 100%;}
+
+      body {display: flex;
+            flex-direction: column;}
+
+      .content {flex: 1 0 auto;}
+
+
+header {width:100%;
+        height: auto;
+        border-bottom: 3px solid #cccccc;
+        background-color: #ffffff;
+        margin-bottom: 40px;}
+        
+
+        header .container {
+            width: 960px;
+            margin: 0 auto;}
+
+footer {width: 100%;
+        height: auto;
+        position: bottom;
+        clear: both;
+        padding:15px;
+        border-top: 9px #ffffff;
+        background-color: #666666;
+        text-align: center;}
+
+        footer .container {
+            width: 960px;
+            margin:0 auto;
+            position: bottom;}
+
+.nav {list-style-type: none;
+    margin-right: 100px;
+    padding: 0;
+    overflow: hidden; 
+    background-color: #ffffff;}
+
+    .nav {float: right;
+        font-family: 'Georgia', Times, 'Times New Roman', serif;}
+        
+        
+        .nav a:visited {color:green}
+        .nav a:hover {color:white;
+                    background-color: black}
+    
+
+    .nav li {display: inline-block;
+            padding: 12px 14px;
+            font-size: 2em;
+            letter-spacing: 0.03em;}
+
+
+    .name 	{display: inline-block;
+        font-family: 'Georgia', Times, 'Times New Roman', serif;
+        font-weight: bold;
+        font-size: 2em;
+        letter-spacing: 0.05em;
+        background-color: #4aaaa5;
+        color: #ffffff;
+        padding: 1em;
+        margin: auto;}
+
+.content {width: 960px;
+        position: center;
+        margin: auto;}  
+ 
+   .core {float: left;
+        width: 650px;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        margin:5px;
+        }
+
+            .photo { height: 200px;
+                    width: 150px;
+                    margin-right: 25px;
+                    margin-bottom: 20px;
+                    margin-top: 10px;
+                    float: left;}
+
+    .side {float: right;
+        width:270px;
+        background-color: #ffffff;
+        border: 3px solid #dddddd;
+        margin:5px;
+        vertical-align: top;}
+
+        .icon-links li {list-style-type: none;
+            float: left;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; }
+
+        .icon {width:75px;
+            height: 75px;
+            padding: 5px;
+            float: left;
+            overflow: hidden;}
+
+        .box {width: 75%;}
+
+        .comment {width: 90%;
+                height: 150px;}
+
+        form {display: block;
+            padding-bottom:0.4em;
+            background: transparent;}
+
+    .portfolio-picture {display: inline-block;
+                        position: relative;
+                        width:250px;
+                        height:200px;
+                        margin: 15px;}
+        .portfolio-picture h2 {	position: relative;
+            top: -100px;
+            text-align: center;
+            background-color: #4aaaa5;
+            color: #ffffff;
+            padding: 4px;}
