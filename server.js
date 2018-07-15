@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static("/public"));
 
-require("./routes/apiroutes")(app);
-require("./routes/htmlRoutes")(app);
+require("/routes/apiroutes")(app);
+require("/routes/htmlRoutes")(app);
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
