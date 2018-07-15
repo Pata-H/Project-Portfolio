@@ -1,4 +1,4 @@
-var connection = require("../config/connection.js");
+var connection = require("./config/connection.js");
 
 module.exports = function(app) {
   app.get("/api/listData", function(req, res) {
