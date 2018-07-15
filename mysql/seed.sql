@@ -1,0 +1,1 @@
+INSERT INTO info (name, birthday, height, sex, food) VALUES ("Russell Francisco", "1988-03-18", "6 Feet 1 Inch", "Male", "Roast Chicken");

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Russell Francisco's Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+    <header>
+            <div class="name">Russell Francisco</div>
+        <div class="nav">
+            <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="content">
+        <div class="core">
+            <h1 class="title">About me</h1>
+            <hr>
+            <p><img class="photo" src="./assets/images/MyPicture.png" alt="It's Me, Russell."></image>
+                
+                
+                <button class="clicker">"Click here for Info about me!"</button>
+                <div class = "table">
+                        <div id= "bottom"></div>
+                        <div id = "bio"></div>
+                    </div>
+                  
+        </div>
+        <div class="side">
+            <h2 class="side-title">Contact Me</h2>
+            <hr>
+            <div class="icon-links">
+                <ul>
+                    <li><a href="https://github.com/Pata-H"><img class="icon"src="/assets/images/github.png"></a></li>
+                    <li><a href="https://stackoverflow.com/users/9248432/russell-francisco"><img class="icon" src="/assets/images/stackoverflow.png"></a></li>
+                    <li><a href="https://www.linkedin.com/in/russell-francisco-9977a3157/"><img class="icon" src="/assets/images/linkedin.png"></a></i>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+ console.log("Test")
+ $( ".Test" ).append("<p>Testing, testing!</p>");
+
+
+$(".clicker").on("click", function(){
+    event.preventDefault();
+    $.get("/api/listData", function(data) {
+        console.log(data)
+
+    for (var i = 0; i < data.length; i++) {
+
+        console.log(data[i].name);
+       
+
+        var table = $("<div>");
+        table.addClass("data");
+
+        table.append("<p> Name:" + data[i].name + "</p>");
+        table.append("<p>Birthday:" + data[i].birthday + "</p>");
+        table.append("<p>Height:" + data[i].height + "</p>");
+        table.append("<p>Sex:" + data[i].sex + "</p>")
+        table.append("<p>Favorite Food:" + data[i].food + "</p>");
+
+        console.log(table[0].innerHTML);
+
+  
+
+              $("#bottom").html(table[0].innerHTML);
+
+                     $("#bio" ).append("<p>INSERT BIOGRAPHY HERE</p>");
+}
+}
+)
+}
+)
+
+</script>
+</body>
+<footer>Copyright Russell Francisco 2018</footer>

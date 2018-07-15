@@ -1,0 +1,17 @@
+{
+    "name": "portfolio-data",
+    "version": "0.5.0",
+    "description": "API for my portfolio",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "PORT=4200 node server.js",
+        "dev": "NODE_ENV=test PORT=4205 nodemon server.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "mysql": "^2.15.0",
+        "path": "^0.12.7"
+    }
+}
